@@ -1,4 +1,73 @@
-.SearchBox{
+.SearchBox {
+    width: 500px;
+    max-width: 100%;
+    margin-bottom: 30px;
     text-align: center;
-    margin-bottom: 1.5rem;
+}
+
+.SearchBox form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.SearchBox .MuiTextField-root {
+    flex: 1;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 12px;
+}
+
+.SearchBox .MuiOutlinedInput-notchedOutline {
+    border: 1px solid black;
+    border-radius: 12px;
+}
+
+.SearchBox .MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline {
+    border: 1px solid black;
+    border-radius: 12px;
+}
+
+.SearchBox .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
+    border: 1px solid black;
+    border-radius: 12px;
+}
+
+.SearchBox .MuiInputLabel-root {
+    font-size: 18px;
+    color: #64748b;
+}
+
+.SearchBox .MuiInputLabel-root.Mui-focused {
+    font-size: 18px;
+    color: #64748b;
+}
+
+.SearchBox button {
+    height: 56px;
+    padding: 0 24px;
+    border-radius: 12px;
+    font-weight: 600;
+    text-transform: none;
+    box-shadow: none;
+    background-color: black;
+}
+
+@media (max-width: 600px) {
+
+    .SearchBox {
+        width: 100%;
+    }
+
+    .SearchBox form {
+        flex-direction: column;
+    }
+
+    .SearchBox .MuiTextField-root {
+        width: 100%;
+    }
+
+    .SearchBox button {
+        width: 100%;
+    }
 }
