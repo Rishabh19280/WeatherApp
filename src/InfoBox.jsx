@@ -5,7 +5,9 @@ import Typography from '@mui/material/Typography';
 import ThunderstormIcon from '@mui/icons-material/Thunderstorm';
 import AcUnitIcon from '@mui/icons-material/AcUnit';
 import SunnyIcon from '@mui/icons-material/Sunny';
+import WeatherDetail from './WeatherDetail';
 import './InfoBox.css'
+
 
 export default function InfoBox({ info }) {
 
@@ -77,7 +79,7 @@ export default function InfoBox({ info }) {
                                 </p>
                             </div>
 
-                            
+
                         </div>
 
                         <div className="temperature">
@@ -90,31 +92,26 @@ export default function InfoBox({ info }) {
 
                         <div className="weatherDetails">
 
-                            <div className="detailBox">
-                                <div className="detailIcon">💧</div>
-                                <p className="detailTitle">Humidity</p>
-                                <p className="detailValue">
-                                    {info.humidity}%
-                                </p>
-                            </div>
+                            <WeatherDetail
+                                icon="💧"
+                                title="Humidity"
+                                value={`${info.humidity}%`}
+                            />
 
-                            <div className="detailBox">
-                                <div className="detailIcon">🌡️</div>
-                                <p className="detailTitle">Min Temp</p>
-                                <p className="detailValue">
-                                    {info.tempMin}°C
-                                </p>
-                            </div>
+                            <WeatherDetail
+                                icon="🌡️"
+                                title="Min Temp"
+                                value={`${info.tempMin}°C`}
+                            />
 
-                            <div className="detailBox">
-                                <div className="detailIcon">🌡️</div>
-                                <p className="detailTitle">Max Temp</p>
-                                <p className="detailValue">
-                                    {info.tempMax}°C
-                                </p>
-                            </div>
+                            <WeatherDetail
+                                icon="🌡️"
+                                title="Max Temp"
+                                value={`${info.tempMax}°C`}
+                            />
 
                         </div>
+
                     </CardContent>
                 </Card>
             </div>
